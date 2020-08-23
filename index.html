@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width, initial-scale=1.0"> -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    <title>Baseball</title>
+</head>
+<body>
+    <div class="baseball-container">
+        <header class="header">
+            <h1 class="game-title">⚾ BASEBALL GAME ⚾</h1>
+            <div class="startGame-container">
+                <button class="playBtn">
+                   <span>Start!</span>
+                </button>
+            </div>
+            <div class="gameForm-container hidden">
+                <h2>"Guess three digit numbers, e.g. 789, 013..."</h2>
+                <form class="gameForm">
+                    <input class="gameInput" type="text" name="gameInput" id="gameInput" placeholder="numbers only"
+                     maxlength="3">
+                     <button class="inputBtn" type="submit">Enter!</button>
+                </form>
+            </div>
+        </header>
+        <main class="board-container hidden">
+                <ul class="gameBoard">
+                    <li class="gameBoard__title gameList">
+                        <span>Inning</span>
+                        <span>Your Numers</span>
+                        <span>Result</span>
+                    </li>
+                </ul>
+        </main>
+        <footer><h1 class="gameResult"></h1></footer>
+    </div>
+    <script src="startToPlay.js"></script>
+    <script src="inGame.js"></script>
+    <script src="error.js"></script>
+</body>
+</html>
