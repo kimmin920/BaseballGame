@@ -23,29 +23,31 @@ function openInGameHeader(){
 
 function reStart(){
     while( globalGameInning > 0 ){
-        const childNode = gameBoard.querySelector(".childList");
+        const childNode = gameBoard.querySelector(".gameList-temp");
         gameBoard.removeChild(childNode);
         globalGameInning--;
     }
     gameForm.removeEventListener("submit", preventSubmit);
     inGame();
-    gameResult.innerHTML="";
+    gameResult.innerHTML = "";
 }
+
 function openInGameBoard(){
-    boardContainer.classList.remove("hidden");  
+    boardContainer.classList.remove("hidden");
 }
+
 function handleStart(){
     if(playBtn.classList.contains("started")){
         reStart();
     }
-   globalRandomArr = getRandomNumArr();
-   openInGameHeader();
-   openInGameBoard();
-   console.log(globalRandomArr);
+    globalRandomArr = getRandomNumArr();
+    openInGameHeader();
+    openInGameBoard();
+    console.log(globalRandomArr);
 }
 
 function startToPlay(){
-    playBtn.addEventListener("click", handleStart)
+    playBtn.addEventListener("click", handleStart);
 }
 
 startToPlay();

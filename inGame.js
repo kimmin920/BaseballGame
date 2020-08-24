@@ -19,7 +19,7 @@ function paintBoard(userNumArr, globalGameInning, result){
 
     //currently not in use
     eachGame.classList.add("gameList");
-    eachGame.classList.add("childList");
+    eachGame.classList.add("gameList-temp");
     eachInput.classList.add("eachInput"); 
 
     eachInning.appendChild(eachInningText);
@@ -90,6 +90,7 @@ function playGame(userNumArr){
        return gameOver();
     }
 }
+
 function handleSubmit(e){
     e.preventDefault();
     const userNumArr = Array.from(input.value);
@@ -100,4 +101,5 @@ function handleSubmit(e){
 function inGame(){
     gameForm.addEventListener("submit", handleSubmit);
 }
+
 inGame();

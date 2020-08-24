@@ -2,10 +2,12 @@ html, body{
     height: 100%;
     width: 100%;
 }
+
 *{
     box-sizing: border-box;
     font-family: 'VT323', monospace;
 }
+
 body{
     margin: 0;
     display:flex;
@@ -18,10 +20,12 @@ body{
     background-position: center;
     background-size: 100%;
 }
+
 /* game-title */
 .game-title{
     font-size: 50px;
 }
+
 /* game container (biggest div) */
 .baseball-container{
     padding: 1rem;
@@ -40,12 +44,14 @@ body{
     align-items: center;
     justify-content: space-evenly;
 }
+
 .started{
     font-size : 18px;
     width: fit-content;
     padding:0.2rem;
     background:rgba(248, 76, 76, 0.801);
 }
+
 h2{ 
     font-size: 18px;
     font-family: 'Coming Soon', cursive;
@@ -61,10 +67,12 @@ h2{
     border-radius: 8px;
     margin-top: 5px;
 }
+
 .gameBoard{
     padding:0;
     width: 100%;
 }
+
 .gameList{
     display: flex;
     flex-direction: row;
@@ -72,6 +80,7 @@ h2{
     color: rgb(247, 247, 247);
     font-size: 20px;
 }
+
 .gameList span{
     width: 160px;
     text-align: center;
@@ -87,6 +96,7 @@ h2{
         transform: none;
     }
 }
+
 @keyframes fadeOut{
     from{
         opacity: 1;
@@ -96,9 +106,10 @@ h2{
         transform: translateY(70%);
     }
 }
+
 .gameBoard__title{
     font-size: 30px;
-   }
+}
 
 /* button */
 button{
@@ -115,12 +126,14 @@ button{
     margin: 5px;
     transition: all 0.5s;
 }
+
 .playBtn span{
     cursor: pointer;
     display: inline-block;
     position: relative;
     transition: 0.5s;
 }
+
 .playBtn span::after{
     content: ">>>";
     position: absolute;
@@ -129,17 +142,21 @@ button{
     right: -20px;
     transition: 0.5s;
 }
+
 .playBtn:hover{
     transition:0.5s ease-in-out;
     width: 130px;
 }
+
 .playBtn:hover span{
     padding-right: 25px;
 }
+
 .playBtn:hover span::after{
     opacity: 1;
     right: -5px;
 }
+
 /* form  */
 .gameForm-container{
     position: relative;
@@ -147,12 +164,14 @@ button{
     flex-direction: column;
     align-items: center;
 }
+
 .gameForm{
     z-index: 3;
     width: 250px;
     position: relative;
     align-items: center;
 }
+
 .gameInput{
     z-index: 0;
     width: inherit;
@@ -161,9 +180,11 @@ button{
     border-radius: 8px;
     font-size: 24px;
 }
+
 .gameInput:focus{
     outline-color: #4ca2cb;
 }
+
 .inputBtn{
     z-index: 1;
     padding: 5px;
