@@ -4,6 +4,7 @@ const playBtn = document.querySelector(".playBtn");
 const gameFormContainer = document.querySelector(".gameForm-container");
 let globalRandomArr = [];
 let globalGameInning = 0;
+let isGameOn = false;
 
 function getRandomNumArr(){
     let randomNumSet = new Set([]);
@@ -25,7 +26,7 @@ function reStart(){
     while( globalGameInning > 0 ){
         const childNode = gameBoard.querySelector(".gameList-temp");
         gameBoard.removeChild(childNode);
-        globalGameInning--;
+        globalGameInning --;
     }
     gameForm.removeEventListener("submit", preventSubmit);
     inGame();
@@ -37,12 +38,14 @@ function openInGameBoard(){
 }
 
 function handleStart(){
-    if(playBtn.classList.contains("started")){
+    if(isGameOn){
         reStart();
     }
+    isGameOn = true;
     globalRandomArr = getRandomNumArr();
     openInGameHeader();
     openInGameBoard();
+
     console.log(globalRandomArr);
 }
 

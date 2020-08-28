@@ -51,8 +51,8 @@ function getResult(userNumArr){
     // ball or strike
     for (let i in user){
         if(user[i] === computer[i]){
-            ball--;
-            strike++;
+            ball --;
+            strike ++;
         }
     }
 
@@ -66,7 +66,7 @@ function getResult(userNumArr){
 
 function preventSubmit(e){
     e.preventDefault();
-    alert("game is over click RE-START");
+    alert("game is over, click RE-START");
 }
 
 function gameOver(win){
@@ -80,7 +80,7 @@ function gameOver(win){
 }
 
 function playGame(userNumArr){
-    globalGameInning++
+    globalGameInning ++
     const result = getResult(userNumArr);
     paintBoard(userNumArr, globalGameInning, result);
     if(result === "3 strike"){
